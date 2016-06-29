@@ -8,36 +8,17 @@ import UIKit
         didSet { update() }
     }
     @IBInspectable var templateImage: UIImage? = nil {
-        didSet {
-            update()
+        didSet { update() }
+    }
+    
+    func reset() {
+        for subview in subviews {
+            subview.removeFromSuperview()
         }
     }
-    
-    public override init(frame: CGRect) {
-        super.init(frame: frame)
-        setup()
-    }
-    
-    public required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
-    }
-    
-    private var items: [UIImageView] = []
-    
-    func setup() {
-        for _ in 0...count {
-            let item = UIImageView()
-            items.append(item)
-            addSubview(item)
-        }
-    }
-    
-    func reset() { items = [] }
     
     func update() {
         reset()
-        setup()
         setNeedsLayout()
     }
     
@@ -50,10 +31,13 @@ import UIKit
     public override func layoutSubviews() {
         super.layoutSubviews()
         
+        guard subviews.count == 0 else { return }
+        
         var offsetX = 0.0 as CGFloat
-        for item in items {
-            item.image = templateImage
-            item.sizeToFit()
+        for _ in 1...count {
+            let item = UIImageView(image: templateImage)
+            addSubview(item)
+
             guard let size = templateImage?.size else { return }
             item.frame = CGRect(origin: CGPoint(x: offsetX, y: 0),
                                 size: size)
