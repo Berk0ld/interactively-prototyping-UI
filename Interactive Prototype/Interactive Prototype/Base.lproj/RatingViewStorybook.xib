@@ -15,28 +15,23 @@
                     <rect key="frame" x="120" y="34" width="360" height="72"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="image" keyPath="templateImage" value="star-small"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="templateImage" value="star"/>
                     </userDefinedRuntimeAttributes>
                 </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fLq-q0-sBa" customClass="RatingView" customModule="Interactive_Prototype" customModuleProvider="target">
                     <rect key="frame" x="50" y="125" width="500" height="125"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="image" keyPath="templateImage" value="rate-yo"/>
+                        <userDefinedRuntimeAttribute type="image" keyPath="templateImage" value="star-yo"/>
                         <userDefinedRuntimeAttribute type="number" keyPath="count">
                             <integer key="value" value="4"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rW5-du-Csu" customClass="RatingView" customModule="Interactive_Prototype" customModuleProvider="target">
-                    <rect key="frame" x="177" y="268" width="256" height="64"/>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gol-p1-Agk" customClass="RatingProxyView" customModule="Interactive_Prototype" customModuleProvider="target">
+                    <rect key="frame" x="116" y="313" width="369" height="151"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="image" keyPath="templateImage" value="yellow-star"/>
-                        <userDefinedRuntimeAttribute type="number" keyPath="count">
-                            <integer key="value" value="4"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
+                    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -44,8 +39,7 @@
         </view>
     </objects>
     <resources>
-        <image name="rate-yo" width="125" height="125"/>
-        <image name="star-small" width="72" height="72"/>
-        <image name="yellow-star" width="64" height="64"/>
+        <image name="star" width="72" height="72"/>
+        <image name="star-yo" width="125" height="125"/>
     </resources>
 </document>

@@ -8,7 +8,9 @@ import UIKit
         didSet { update() }
     }
     @IBInspectable var templateImage: UIImage? = nil {
-        didSet { update() }
+        didSet {
+            update()
+        }
     }
     
     public override init(frame: CGRect) {

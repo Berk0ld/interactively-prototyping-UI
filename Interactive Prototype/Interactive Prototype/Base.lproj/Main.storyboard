@@ -17,12 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IIs-cJ-6Vg" customClass="RatingView" customModule="Interactive_Prototype" customModuleProvider="target">
-                                <rect key="frame" x="175" y="237" width="250" height="125"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IIs-cJ-6Vg" customClass="RatingView" customModule="Interactive_Prototype" customModuleProvider="target">
+                                <rect key="frame" x="228" y="263.5" width="144" height="72"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="templateImage" value="rate-yo"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="templateImage" value="star"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="count">
                                         <integer key="value" value="2"/>
                                     </userDefinedRuntimeAttribute>
@@ -46,6 +46,9 @@
                             <constraint firstItem="O5k-2C-QRF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vss-gs-Cjf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ratingView" destination="IIs-cJ-6Vg" id="8Q5-JP-xYD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -53,6 +56,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="rate-yo" width="125" height="125"/>
+        <image name="star" width="72" height="72"/>
     </resources>
 </document>
